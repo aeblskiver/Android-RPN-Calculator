@@ -1,10 +1,12 @@
 package edu.fullerton.ecs.reversepolishnotation;
 
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,11 +19,13 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     private Button subButton;
     private Button multButton;
     private Button divButton;
-    private Button delButton;
+    private ImageButton delButton;
     private Button dropButton;
-    private Button evalButton;
+    private Button decButton;
     private TextView inputTextView;
+    private Button enterButton;
 
+    String[] topFour = new String[4];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,46 +38,92 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
             Log.d(TAG, "onCreate: " + numberButtons[i].toString());
             numberButtons[i].setOnClickListener(this);
         }
+        //Get widget references
+        enterButton = (Button) findViewById(R.id.buttonEnter);
+        addButton = (Button) findViewById(R.id.buttonAdd);
+        multButton = (Button) findViewById(R.id.buttonMult);
+        divButton = (Button) findViewById(R.id.buttonDiv);
+        subButton = (Button) findViewById(R.id.buttonSub);
+        delButton = (ImageButton) findViewById(R.id.buttonDelete);
+        decButton = (Button) findViewById(R.id.buttonDecimal);
+        dropButton = (Button) findViewById(R.id.buttonDrop);
 
+        inputTextView = (TextView) findViewById(R.id.inputNumberTextView);
 
+        //Set event handlers
+        addButton.setOnClickListener(this);
+        enterButton.setOnClickListener(this);
+        multButton.setOnClickListener(this);
+        divButton.setOnClickListener(this);
+        subButton.setOnClickListener(this);
+        delButton.setOnClickListener(this);
+        decButton.setOnClickListener(this);
+        dropButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        int digit = 0;
+        char digit;
+        String text;
         switch (view.getId()) {
             case R.id.button0:
-                digit = 0;
-                break;
             case R.id.button1:
-                digit = 1;
-                break;
             case R.id.button2:
-                digit = 2;
-                break;
             case R.id.button3:
-                digit = 3;
-                break;
             case R.id.button4:
-                digit = 4;
-                break;
             case R.id.button5:
-                digit = 5;
-                break;
             case R.id.button6:
-                digit = 6;
-                break;
             case R.id.button7:
-                digit = 7;
-                break;
             case R.id.button8:
-                digit = 8;
-                break;
             case R.id.button9:
-                digit = 9;
+                String viewId = view.getResources().getResourceName(view.getId());
+                digit = viewId.charAt(viewId.length() - 1);
+                String currentNum = inputTextView.getText().toString();
+                currentNum  = currentNum + digit;
+                inputTextView.setText(currentNum);
+                break;
+            case R.id.buttonAdd:
+                stack.evaluateOperation("+");
+                refreshStackDisplay();
+                break;
+            case R.id.buttonMult:
+                stack.evaluateOperation("*");
+                refreshStackDisplay();
+                break;
+            case R.id.buttonSub:
+                stack.evaluateOperation("-");
+                refreshStackDisplay();
+                break;
+            case R.id.buttonDiv:
+                stack.evaluateOperation("/");
+                refreshStackDisplay();
+                break;
+            case R.id.buttonEnter:
+                stack.input(Float.parseFloat(inputTextView.getText().toString()));
+                inputTextView.setText("");
+                refreshStackDisplay();
+                break;
+            case R.id.buttonDecimal:
+                text = inputTextView.getText().toString();
+                inputTextView.setText(text + '.');
+                break;
+            case R.id.buttonDelete:
+                text = inputTextView.getText().toString();
+                inputTextView.setText(text.substring(0,text.length()-1));
+                break;
+            case R.id.buttonDrop:
+                inputTextView.setText("");
                 break;
             default: break;
         }
-        Toast.makeText(this, Integer.toString(digit) ,Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, Integer.toString(digit) ,Toast.LENGTH_SHORT).show();
+    }
+
+    private void refreshStackDisplay() {
+        String [] topFour = stack.getTopFour();
+        //SetDisplay for stack
+        for(int i = 0 ; i < topFour.length; i++) {
+            Log.d(TAG, "displayStack: " + topFour[i].toString());
+        }
     }
 }

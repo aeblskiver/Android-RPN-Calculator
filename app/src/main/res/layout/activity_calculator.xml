@@ -15,13 +15,12 @@
 
         <TextView
             android:id="@+id/inputNumberTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="131dp"
             android:layout_height="wrap_content"
-            android:textSize="32sp"
-            android:text="Placeholder"
             android:layout_gravity="bottom|left"
+            android:paddingBottom="16dp"
             android:paddingLeft="16dp"
-            android:paddingBottom="16dp"/>
+            android:textSize="32sp" />
 
     </FrameLayout>
 
@@ -97,10 +96,11 @@
         <Button
             android:id="@+id/button0"
             android:text="0"/>
+
         <Button
-            android:id="@+id/buttonEvaluate"
-            android:layout_gravity="fill_horizontal"
+            android:id="@+id/buttonEnter"
             android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
             android:text="ENTER" />
     </GridLayout>
 </LinearLayout>
