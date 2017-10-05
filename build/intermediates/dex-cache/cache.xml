@@ -2,112 +2,22 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/Users/Duy/.android/build-cache/fb488b3930208fad5a708d9ecb273fc68e2401fc/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/justin/Android_Samples/ReversePolishNotation/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/classes_a92d8a63c71cb81b8926d3a1d2215090e5c94f94.jar" />
+        sha1="88f063e725fbf2beb38e2812dce4292d1f074ec7">
+        <dex dex="/home/justin/Android_Samples/ReversePolishNotation/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_729e6e3e637789395e321ee6649ad4cbe8e97555/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/Duy/.android/build-cache/805a14037ad065e1916cb61a60ebf08ff7ec1972/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/justin/Android_Samples/ReversePolishNotation/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/classes_8298debbf6e82b9ca3a9c4dcee48cf2d7286a548.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Duy/.android/build-cache/36087c1f59876e181d297aa2df9aa53e08245406/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="9935891f23923f39d002087085d9696568a9f657">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/classes_657694b8e1c926c85dd4f0cbcefab2d8fe63d9d2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Duy/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="023ee503b631f69511e335a061ea008f8da60f40">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/support-annotations-26.0.0-alpha1_51b2a919e759a7e9b1b6a201c77a6ed72ef205aa.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Duy/.android/build-cache/500a88197ee6e1a3b55d9b31a38e8f7eb4b7ac3b/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/classes_3b323654808fa09baa541a79c7ee038751d30e8f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Duy/.android/build-cache/dd1712502fc6d10b1056d19d6aa31b7b3c552eb6/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="952944218ecedea1554a513dec0c14d570642843">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/classes_9cea7eeb4bbce692109666ea3f268a00eadac765.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Duy/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_3f7f8377fd9abe649463ed98bb8d464d8dbf6026.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Duy/.android/build-cache/64cf99a35a570f4e9c95df715ead065ad19f4768/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/classes_6ec174ce47479c2464165c2b6786a4d4363d73c4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Duy/.android/build-cache/a91f9bbb12c1f42d7e4df401bd17c496a129682d/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/classes_9c9d9493a2214575ab24590f0043b3e50de86a6b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Duy/.android/build-cache/6a360a74b2bdea518dec394379cce98e60141e8d/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/classes_03a1664583ecfcaad27372a62fe6a307b77cc342.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Duy/.android/build-cache/b36e5efe706d9714ff00a713597db4d01c8e5f3d/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/classes_778281cb686203d17ea74e9139d4ad417372f47b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/Duy/.android/build-cache/a7d229560d02e99bc86b7c1fd9b4d5d719623340/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.0"
-        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
-        <dex dex="/Users/Duy/Workspace/android/Android-RPN-Calculator/app/build/intermediates/pre-dexed/debug/classes_e3797249386a58d848bf1eea4a9cf849df3dc64b.jar" />
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/justin/Android_Samples/ReversePolishNotation/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_4da5149a52a575dd59a5f7feee116130efbc0e6b/classes.dex" />
     </item>
 
 </items>

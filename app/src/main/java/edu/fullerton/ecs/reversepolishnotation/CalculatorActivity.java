@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class CalculatorActivity extends AppCompatActivity  {
 
@@ -25,6 +24,7 @@ public class CalculatorActivity extends AppCompatActivity  {
     private Button decimalButton;
     private TextView inputTextView;
     private Button enterButton;
+    private TextView[] stackTextView;
 
     String[] topFour = new String[4];
 
@@ -38,10 +38,18 @@ public class CalculatorActivity extends AppCompatActivity  {
         //Get references for digit buttons and set event handlers
         numberButtons = new Button[10];
         for (int i = 0; i < 10; i++) {
-            numberButtons[i] = (Button) findViewById(getResources().getIdentifier("button" + i, "id",this.getPackageName()));
+            numberButtons[i] = (Button) findViewById(getResources().getIdentifier("button" + i, "id", this.getPackageName()));
             Log.d(TAG, "onCreate: " + numberButtons[i].toString());
             numberButtons[i].setOnClickListener(new NumberButtonListener());
         }
+
+        //Get references for stack Text View
+        inputTextView = (TextView) findViewById(R.id.inputNumberTextView);
+        stackTextView = new TextView[4];
+        for (int i = 0; i < 4; i++) {
+            stackTextView[i] = (TextView) findViewById(getResources().getIdentifier("stack" + i + "TextView", "id", this.getPackageName()));
+        }
+
         //Get reference to the input TextView
         inputTextView = (TextView) findViewById(R.id.inputNumberTextView);
 
@@ -82,7 +90,7 @@ public class CalculatorActivity extends AppCompatActivity  {
                 String input = inputTextView.getText().toString();
                 if (input.isEmpty())
                     return;
-                inputTextView.setText(input.substring(0, input.length()-1));
+                inputTextView.setText(input.substring(0, input.length() - 1));
             }
         });
 
@@ -106,13 +114,11 @@ public class CalculatorActivity extends AppCompatActivity  {
 
     private void refreshStackDisplay() {
         String [] topFour = stack.getTopFour();
-        String test = new String("Stack: ");
         //SetDisplay for stack
         for(int i = 0 ; i < topFour.length; i++) {
-            //Log.d(TAG, "displayStack: " + topFour[i].toString());
-            test += topFour[i].toString() + ' ';
+            stackTextView[3-i].setText(topFour[i]);
+            Log.d(TAG, "displayStack: " + topFour[i]);
         }
-        Toast.makeText(this, test, Toast.LENGTH_SHORT).show();
     }
 
     private class OperatorButtonListener implements View.OnClickListener {
