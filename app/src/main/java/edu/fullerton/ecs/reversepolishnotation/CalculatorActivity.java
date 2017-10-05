@@ -118,7 +118,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
                 break;
             default: break;
         }
-//        Toast.makeText(this, Integer.toString(digit) ,Toast.LENGTH_SHORT).show();
     }
 
     private void refreshStackDisplay() {
