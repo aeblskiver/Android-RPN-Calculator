@@ -104,10 +104,12 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
                 refreshStackDisplay();
                 break;
             case R.id.buttonDecimal:
+                //TODO: Fix bug: More than one decimal point can be entered
                 text = inputTextView.getText().toString();
                 inputTextView.setText(text + '.');
                 break;
             case R.id.buttonDelete:
+                //TODO: Fix bug: Deleting from empty text causes crash
                 text = inputTextView.getText().toString();
                 inputTextView.setText(text.substring(0,text.length()-1));
                 break;
