@@ -125,9 +125,8 @@ public class CalculatorActivity extends AppCompatActivity  {
         @Override
         public void onClick(View view) {
             String input = inputTextView.getText().toString();
-            if (!isValidInput(input))
-                return;
-            stack.input(input);
+            if (isValidInput(input))
+                stack.input(input);
             stack.evaluateOperation(((Button)view).getText().toString());
             refreshStackDisplay();
         }
