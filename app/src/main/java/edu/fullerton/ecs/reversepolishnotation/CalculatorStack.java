@@ -17,8 +17,8 @@ public class CalculatorStack {
         stack = new ArrayDeque<String>();
     }
 
-    public void input(float x) {
-        stack.addLast(Float.toString(x));
+    public void input(String num) {
+        stack.addLast(num);
     }
 
     public String[] getTopFour() {
@@ -32,8 +32,8 @@ public class CalculatorStack {
     }
 
     public void evaluateOperation(String op) {
-        float val2 = Float.parseFloat(stack.pollLast());
-        float val1 = Float.parseFloat(stack.pollLast());
+        float val2 = pop();
+        float val1 = pop();
         float result = 0;
         switch (op) {
             case "+":
@@ -50,6 +50,12 @@ public class CalculatorStack {
             break;
             default: break;
         }
-        input(result);
+        input(Float.toString(result));
+    }
+
+    private float pop() {
+        if (stack.isEmpty())
+            return 0f;
+        return Float.parseFloat(stack.pollLast());
     }
 }
