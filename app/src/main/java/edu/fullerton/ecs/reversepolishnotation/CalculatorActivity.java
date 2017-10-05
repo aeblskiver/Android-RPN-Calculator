@@ -24,6 +24,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     private Button decButton;
     private TextView inputTextView;
     private Button enterButton;
+    private TextView[] stackTextView;
 
     String[] topFour = new String[4];
     @Override
@@ -49,6 +50,10 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         dropButton = (Button) findViewById(R.id.buttonDrop);
 
         inputTextView = (TextView) findViewById(R.id.inputNumberTextView);
+        stackTextView = new TextView[4];
+        for (int i = 0; i < 4; i++) {
+            stackTextView[i] = (TextView) findViewById(getResources().getIdentifier("stack" + i + "TextView", "id",this.getPackageName()));
+        }
 
         //Set event handlers
         addButton.setOnClickListener(this);
@@ -99,6 +104,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
                 refreshStackDisplay();
                 break;
             case R.id.buttonEnter:
+                //TODO: Fix big: Crash if nothing entered
                 stack.input(Float.parseFloat(inputTextView.getText().toString()));
                 inputTextView.setText("");
                 refreshStackDisplay();
@@ -124,6 +130,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         String [] topFour = stack.getTopFour();
         //SetDisplay for stack
         for(int i = 0 ; i < topFour.length; i++) {
+            stackTextView[3-i].setText(topFour[i]);
             Log.d(TAG, "displayStack: " + topFour[i].toString());
         }
     }
