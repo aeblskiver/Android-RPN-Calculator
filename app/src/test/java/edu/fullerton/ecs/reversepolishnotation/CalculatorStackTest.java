@@ -9,13 +9,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 public class CalculatorStackTest {
-    CalculatorStack calc;
-    @Before
-    public void init() {
-        calc = new CalculatorStack();
-        calc.input(5);
-        calc.input(5);
-    }
+//    CalculatorStack calc;
+//    @Before
+//    public void init() {
+//        calc = new CalculatorStack();
+//        calc.input(5);
+//        calc.input(5);
+//    }
 
 //    @Test
 //    public void successAdd() {
