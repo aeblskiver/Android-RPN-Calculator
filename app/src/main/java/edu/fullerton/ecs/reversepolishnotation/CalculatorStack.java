@@ -1,5 +1,6 @@
 package edu.fullerton.ecs.reversepolishnotation;
 
+import java.io.Serializable;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
@@ -11,15 +12,20 @@ import java.util.List;
  */
 
 public class CalculatorStack {
-    public Deque<String> getStack() {
+
+    public ArrayDeque<String> getStack() {
         return stack;
     }
 
 
-    private Deque<String> stack;
+    private ArrayDeque<String> stack;
 
     public CalculatorStack() {
         stack = new ArrayDeque<String>();
+    }
+
+    public CalculatorStack(Serializable savedStack) {
+        stack = new ArrayDeque<String>((ArrayDeque) savedStack);
     }
 
     public void input(String num) {

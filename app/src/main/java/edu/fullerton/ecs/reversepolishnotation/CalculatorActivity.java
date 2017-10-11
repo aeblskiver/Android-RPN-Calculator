@@ -117,21 +117,15 @@ public class CalculatorActivity extends AppCompatActivity  {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        ArrayList<String> list =  new ArrayList<>(stack.getStack());
-        outState.putStringArrayList("stack", list);
+        outState.putSerializable("stack",stack.getStack());
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-
-        ArrayList<String> list = savedInstanceState.getStringArrayList("stack");
-        if (stack.getStack().isEmpty() && !list.isEmpty()) {
-            for (String item : list
-                    ) {
-                stack.input(item);
-                refreshStackDisplay();
-            }
+        if (stack.getStack().isEmpty()) {
+            stack = new CalculatorStack(savedInstanceState.getSerializable("stack"));
+            refreshStackDisplay();
         }
     }
 
