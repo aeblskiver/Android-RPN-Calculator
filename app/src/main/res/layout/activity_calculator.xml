@@ -70,96 +70,96 @@
 
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:columnCount="4"
         android:rowCount="5"
         android:useDefaultMargins="true"
-        android:layout_gravity="fill_horizontal"
+        android:layout_gravity="center"
         >
 
         <ImageButton
             android:id="@+id/buttonDelete"
             android:layout_width="0dp"
-            android:layout_gravity="fill_horizontal|top|left"
+            android:layout_gravity="fill_horizontal"
             android:scaleType="fitCenter"
             android:backgroundTint="@color/colorPrimaryDark"
             app:srcCompat="@android:drawable/ic_input_delete" />
         <Button
             android:id="@+id/buttonDrop"
-            android:layout_gravity="top|left"
+
             android:text="Drop"/>
         <Button
             android:id="@+id/buttonIDK"
-            android:layout_gravity="top|left"
+
             android:text="%"
             android:visibility="gone"/>
         <Button
             android:id="@+id/buttonDiv"
-            android:layout_gravity="top|left"
+
             android:text="/"/>
         <Button
             android:id="@+id/button7"
-            android:layout_gravity="top|left"
+
             android:text="7" />
         <Button
             android:id="@+id/button8"
-            android:layout_gravity="top|left"
+
             android:text="8"/>
         <Button
             android:id="@+id/button9"
-            android:layout_gravity="top|left"
+
             android:text="9"/>
         <Button
             android:id="@+id/buttonMult"
-            android:layout_gravity="top|left"
+
             android:text="*"/>
         <Button
             android:id="@+id/button4"
-            android:layout_gravity="top|left"
+
             android:text="4"/>
         <Button
             android:id="@+id/button5"
-            android:layout_gravity="top|left"
+
             android:text="5"/>
         <Button
             android:id="@+id/button6"
-            android:layout_gravity="top|left"
+
             android:text="6"/>
         <Button
             android:id="@+id/buttonSub"
-            android:layout_gravity="top|left"
+
             android:text="-"/>
         <Button
             android:id="@+id/button1"
-            android:layout_gravity="top|left"
+
             android:text="1"/>
         <Button
             android:id="@+id/button2"
-            android:layout_gravity="top|left"
+
             android:text="2"/>
         <Button
             android:id="@+id/button3"
-            android:layout_gravity="top|left"
+
             android:text="3"/>
         <Button
             android:id="@+id/buttonAdd"
-            android:layout_gravity="top|left"
+
             android:text="+"/>
         <Button
             android:id="@+id/buttonDecimal"
-            android:layout_gravity="top|left"
+
             android:text="."/>
         <Button
             android:id="@+id/button0"
-            android:layout_gravity="top|left"
+
             android:text="0"/>
 
         <Button
             android:id="@+id/buttonEnter"
             android:layout_columnSpan="2"
-            android:layout_gravity="top|left|fill_horizontal"
+            android:layout_gravity="fill_horizontal"
             android:text="ENTER" />
     </GridLayout>
 </LinearLayout>

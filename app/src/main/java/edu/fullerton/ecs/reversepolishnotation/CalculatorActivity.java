@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class CalculatorActivity extends AppCompatActivity  {
 
     private static final String TAG = "CalculatorActivity";
@@ -110,6 +112,27 @@ public class CalculatorActivity extends AppCompatActivity  {
                 inputTextView.setText("");
             }
         });
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        ArrayList<String> list =  new ArrayList<>(stack.getStack());
+        outState.putStringArrayList("stack", list);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        ArrayList<String> list = savedInstanceState.getStringArrayList("stack");
+        if (stack.getStack().isEmpty() && !list.isEmpty()) {
+            for (String item : list
+                    ) {
+                stack.input(item);
+                refreshStackDisplay();
+            }
+        }
     }
 
     private void refreshStackDisplay() {

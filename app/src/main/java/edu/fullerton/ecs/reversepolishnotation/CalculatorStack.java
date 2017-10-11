@@ -11,6 +11,11 @@ import java.util.List;
  */
 
 public class CalculatorStack {
+    public Deque<String> getStack() {
+        return stack;
+    }
+
+
     private Deque<String> stack;
 
     public CalculatorStack() {
