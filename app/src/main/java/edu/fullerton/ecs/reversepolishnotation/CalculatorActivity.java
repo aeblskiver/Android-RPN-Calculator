@@ -150,6 +150,7 @@ public class CalculatorActivity extends AppCompatActivity  {
                 stack.input(input);
             stack.evaluateOperation(((Button)view).getText().toString());
             refreshStackDisplay();
+            inputTextView.setText("");
         }
     }
 
