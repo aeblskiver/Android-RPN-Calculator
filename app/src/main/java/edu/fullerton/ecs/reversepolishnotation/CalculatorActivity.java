@@ -109,7 +109,11 @@ public class CalculatorActivity extends AppCompatActivity  {
         dropButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                inputTextView.setText("");
+
+                if (!stack.getStack().isEmpty()) {
+                    float junk = stack.pop();
+                    refreshStackDisplay();
+                };
             }
         });
     }

@@ -14,6 +14,8 @@
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">36sp</item>
     </style>
-    <style name="AppTheme.NumberButton">
+    <style name="AppTheme.OperationButton">
+        <item name="android:backgroundTint">#b9585858</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 </resources>

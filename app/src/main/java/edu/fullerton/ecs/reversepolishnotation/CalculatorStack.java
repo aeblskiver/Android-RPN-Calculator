@@ -64,7 +64,7 @@ public class CalculatorStack {
         input(Float.toString(result));
     }
 
-    private float pop() {
+    public float pop() {
         if (stack.isEmpty())
             return 0f;
         return Float.parseFloat(stack.pollLast());
